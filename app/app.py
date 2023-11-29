@@ -188,11 +188,7 @@ st.sidebar.markdown("""
 ###
 ### Developers:
 
-- Sergio Aizcorbe Pardo
-- Ricardo Chavez Torres
-- Daniel De Las Cuevas Turel
-- Sergio Hidalgo López
-- Zijun He
+- Aleem Ahmed Khan
 
 """)
 
