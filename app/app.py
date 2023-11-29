@@ -323,6 +323,18 @@ def deploy1(uploaded_file, uploaded_mask=None):
              i in range(num_bboxes)])
         st.markdown(mkd_pred_table, unsafe_allow_html=True)
 
+        # Calculate the number of panels and total area
+        panel_size = 1.7  # Size of each solar panel in square meters
+
+        # Compute area and number of panels
+        area_covered = area  # This is the area predicted by the model
+        number_of_panels = area_covered / panel_size
+
+        # Display the results
+        st.write(f'**Number of Panels**: {number_of_panels}')
+        st.write(f'**Total Area Covered by Panels**: {area_covered} square meters')
+
+
     del model
     gc.collect()
 
@@ -451,6 +463,18 @@ def deploy2(selected_img_dir):
             [f"| {i + 1} | {coor_values[i][0]} | {coor_values[i][1]} | {coor_values[i][2]} | {coor_values[i][3]} |"
              for i in range(num_bboxes)])
         st.markdown(mkd_pred_table, unsafe_allow_html=True)
+
+                # Calculate the number of panels and total area
+        panel_size = 1.7  # Size of each solar panel in square meters
+
+        # Compute area and number of panels
+        area_covered = area  # This is the area predicted by the model
+        number_of_panels = area_covered / panel_size
+
+        # Display the results
+        st.write(f'**Number of Panels**: {number_of_panels}')
+        st.write(f'**Total Area Covered by Panels**: {area_covered} square meters')
+
 
     del model
     gc.collect()

@@ -103,5 +103,5 @@ src/models/yolo/yolov5/runs
 *.h5
 *.pth
 *.bmp
-*.png
+
 *.txt
